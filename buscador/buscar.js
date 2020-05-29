@@ -30,7 +30,7 @@ async function buscarPais(pais, year, json) {
             break;
         }
     }
-    return { name: aux['Country Name'], suscripciones: aux[year], anio: year, code: pais }
+    return { name: aux['Country Name'], suscripciones: aux[year], anio: year, code: pais, desc: aux['Indicator Name'] }
 
 }
 async function analizar(pais, year, csvpath) {
@@ -60,7 +60,7 @@ function printConsola(datos) {
     }
     console.log(colors.green(
         '______________________________________________________________\n|             UNIVERSIDAD POLITÉCNICA SALESIANA              |\n|          INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN          |\n|                  EXAMEN PLATAFORMAS WEB                  |\n|               PERSONAS QUE USAN INTERNET              |\n|____________________________________________________________|\n'));
-    console.log(colors.blue("- Datos: "), colors.green(`Personas que usan Internet (% de la población)\n`));
+    console.log(colors.blue("- Datos: "), colors.green(`${datos.desc}\n`));
     console.log(colors.blue("- País: "), colors.green(` ${datos.name}\n`));
     console.log(colors.blue("- Año: "), colors.green(`${datos.anio}\n`));
     console.log(colors.blue("- Valor: "), colors.green(`${comparacion}\n`));
@@ -86,7 +86,7 @@ async function guardartxt(pais, year, csvpath) {
 
         data = '______________________________________________________________\n|             UNIVERSIDAD POLITÉCNICA SALESIANA              |\n|          INGENIERÍA EN CIENCIAS DE LA COMPUTACIÓN          |\n|                  EXAMEN PLATAFORMAS WEB                  |\n|               PERSONAS QUE USAN INTERNET              |\n|____________________________________________________________|\n';
 
-        data += `- Datos: Personas que usan Internet (% de la población)\n`;
+        data += `- Datos: ${paisOB.desc}\n`;
         data += `- País: ${paisOB.name}\n`;
         data += `- Año: ${paisOB.anio}\n`;
         data += `- Valor: ${comparacion}\n`;

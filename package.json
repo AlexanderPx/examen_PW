@@ -1,7 +1,7 @@
 {
   "name": "examen",
   "version": "1.0.0",
-  "description": "",
+  "description": "Esta es una aplicación de Node.js para mostrar en consola y generar archivos txt de una busqueda en específico en un archivo CSV.",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
