@@ -1,0 +1,24 @@
+{
+  "name": "examen",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderPx/examen_PW.git"
+  },
+  "author": "Alexander Pogo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AlexanderPx/examen_PW/issues"
+  },
+  "homepage": "https://github.com/AlexanderPx/examen_PW#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "csvtojson": "^2.0.10",
+    "yargs": "^15.3.1"
+  }
+}
